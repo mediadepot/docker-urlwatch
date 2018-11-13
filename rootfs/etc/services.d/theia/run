@@ -2,4 +2,4 @@
 
 echo "starting theia"
 
-su -c "node /srv/theia/app/src-gen/backend/main.js /srv/urlwatch/config --hostname=0.0.0.0" mediadepot
+su -c "node /srv/theia/app/src-gen/backend/main.js /srv/urlwatch/config --port=8081 --hostname=0.0.0.0" mediadepot
