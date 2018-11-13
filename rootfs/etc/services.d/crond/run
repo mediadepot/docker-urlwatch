@@ -2,5 +2,4 @@
 
 echo "starting crond"
 
-crond -l 2 -f
-
+su -c "crond -l 8 -f" root

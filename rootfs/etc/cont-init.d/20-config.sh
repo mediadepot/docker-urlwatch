@@ -24,7 +24,7 @@ cat > /etc/periodic/15min/urlwatch <<DELIM
 #!/bin/sh
 LANG=C.UTF-8 /usr/local/bin/urlwatch --urls /srv/urlwatch/config/urls.yaml --config /srv/urlwatch/config/urlwatch.yaml --cache /srv/urlwatch/data/cache.db
 DELIM
-
+chmod +x /etc/periodic/15min/urlwatch
 fi
 
 # permissions
