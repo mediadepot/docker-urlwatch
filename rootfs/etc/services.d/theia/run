@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv bash
+
+echo "starting theia"
+
+su -c "node /srv/theia/app/src-gen/backend/main.js /srv/urlwatch/config --hostname=0.0.0.0" mediadepot

@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+
+echo "starting crond"
+
+crond -l 2 -f
+

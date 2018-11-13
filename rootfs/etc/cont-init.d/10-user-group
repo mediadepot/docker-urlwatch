@@ -1,0 +1,42 @@
+#!/usr/bin/env sh
+PUID=${PUID:=15000}
+PUSER=${PUSER:=mediadepot}
+PGID=${PGID:=15000}
+PGROUP=${PGROUP:=mediadepot}
+
+#Create internal mediadepot user (which will be mapped to external user and used to run the process)
+addgroup -g $PGID $PGROUP  && adduser -D -u $PUID -G $PGROUP -s /bin/sh $PUSER
+
+echo "
+----------------------------------------
+MMMMMMMMWNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMO:lONMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMk. .;dKWMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMk.    .ckNMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMk.       ,oKNWMMMMMMMMMMMMMMMMMM
+MMMMMMMMk.         .':kXMMMMMMMMMMMMMMMM
+MMMMMMMMk.             'l0WMMMMMMMMMMMMM
+MMMMMMMMk.    ..         .;xXWMMMMMMMMMM
+MMMMMMMMk.    :0k:.         .cONMMMMMMMM
+MMMMMMMMk.    :NMW0:.          ;0WMMMMMM
+MMMMMMMMk.    :NNOl.         .;xXMMMMMMM
+MMMMMMMMk.    'l;.         'o0WMMMMMMMMM
+MMMMMMMMk.              .:kNMMMMMMMMMMMM
+MMMMMMMMk.           .,dKWMMMMMMMMMMMMMM
+MMMMMMMMk.        .cdONMMMMMMMMMMMMMMMMM
+MMMMMMMMk.     .;xXWMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMk.   'l0WMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMk..:xXMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMKk0WMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+
+             MEDIADEPOT
+
+----------------------------------------
+GID/UID
+----------------------------------------"
+echo "
+User uid:    $(id -u mediadepot)
+User gid:    $(id -g mediadepot)
+----------------------------------------
+"
